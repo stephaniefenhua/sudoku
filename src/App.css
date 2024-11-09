@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+}
+
+
+/* Thicker borders on the left and right of each 3x3 box */
+/* .sudoku-cell:nth-child(3n+1) { /* Left border of each 3x3 box */
+/*   border-left: 3px solid #333;
+} */
+/* .sudoku-cell:nth-child(3n) { /* Right border of each 3x3 box */
+/*   border-right: 3px solid #333;
+} */
+
+/* Thicker borders on the top and bottom of each 3x3 row */
+/* .sudoku-cell:nth-child(-n+9) { /* Top border of the first 3x3 row */
+/*   border-top: 3px solid #333;
+} */
+/* .sudoku-cell:nth-last-child(-n+9) { /* Bottom border of the last 3x3 row */
+/*   border-bottom: 3px solid #333;
+} */
+
+/* Apply thicker top border between 3x3 rows */
+/* .sudoku-cell:nth-child(n + 28):nth-child(-n + 36),
+.sudoku-cell:nth-child(n + 55):nth-child(-n + 63) {
+  border-top: 3px solid #333;
+} */
+
+.sudoku-cell::-webkit-inner-spin-button,
+.sudoku-cell::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
